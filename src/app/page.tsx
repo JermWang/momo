@@ -167,7 +167,7 @@ export default function HomePage() {
     
     // Create temporary download link
     const link = document.createElement('a');
-    link.download = 'bonji-meme.png';
+    link.download = 'momo-meme.png';
     link.href = dataUrl;
     document.body.appendChild(link);
     link.click();
@@ -398,7 +398,7 @@ export default function HomePage() {
             <div className="flex flex-row justify-center lg:justify-center gap-6 w-full">
               {[
                 { name: 'DexScreener', img: CHARACTER_IMAGES.social_icons.dexscreener },
-                { name: 'gmgn.ai', img: CHARACTER_IMAGES.social_icons.pumpfun },
+                { name: 'gmgn.ai', img: '/images/little-hat-cabal-pfp.png' },
                 { name: 'Twitter/X', img: CHARACTER_IMAGES.social_icons.twitter }
               ].map(social => (
                 <a
