@@ -442,9 +442,9 @@ export default function HomePage() {
             <div className="mt-4 flex flex-col items-center gap-2">
               <p className="text-sm text-gray-600">Contract Address:</p>
               <div className="flex items-center gap-2">
-                <code className="text-sm bg-gray-100 px-2 py-1 rounded">coming soon</code>
+                <code className="text-sm bg-gray-100 px-2 py-1 rounded">0x0c925ebdfdd2b93984bfae55c4efee6bc7b27777</code>
                 <button 
-                  onClick={() => navigator.clipboard.writeText('coming soon')}
+                  onClick={() => navigator.clipboard.writeText('0x0c925ebdfdd2b93984bfae55c4efee6bc7b27777')}
                   className="text-sm bg-brand-blue text-white px-2 py-1 rounded hover:bg-blue-600 transition-colors"
                 >
                   Copy
