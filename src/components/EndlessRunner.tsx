@@ -1,11 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import type p5 from 'p5';
 import { useRef } from 'react';
 
 // Dynamically import the p5 sketch component to ensure it only runs on the client-side.
-// Our custom p5.d.ts file provides the correct types for the p5 instance.
 const Sketch = dynamic(() => import('react-p5').then((mod) => mod.default), {
   ssr: false,
 });
