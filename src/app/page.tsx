@@ -396,22 +396,46 @@ export default function HomePage() {
           {/* Socials & Info Section */}
           <aside className="w-full lg:w-[360px] flex-shrink-0 flex flex-col items-center lg:items-center gap-4 mt-8 lg:mt-0">
             <div className="flex flex-row justify-center lg:justify-center gap-6 w-full">
-              {[
-                { name: 'DexScreener', img: CHARACTER_IMAGES.social_icons.dexscreener },
-                { name: 'gmgn.ai', img: '/images/little-hat-cabal-pfp.png' },
-                { name: 'Twitter/X', img: CHARACTER_IMAGES.social_icons.twitter }
-              ].map(social => (
-                <a
-                  key={social.name}
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center"
-                  aria-disabled="true"
-                >
-                  <img src={social.img} alt={social.name} className="w-55 h-55 object-contain transition-shadow hover:shadow-md"/>
-                  {social.name}
-                </a>
-              ))}
+              {/* DexScreener and gmgn.ai disabled for now, Twitter links out */}
+              <a
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center"
+                aria-disabled="true"
+              >
+                <img
+                  src={CHARACTER_IMAGES.social_icons.dexscreener}
+                  alt="DexScreener"
+                  className="w-55 h-55 object-contain transition-shadow hover:shadow-md"
+                />
+                DexScreener
+              </a>
+              <a
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center"
+                aria-disabled="true"
+              >
+                <img
+                  src="/images/little-hat-cabal-pfp.png"
+                  alt="gmgn.ai"
+                  className="w-55 h-55 object-contain transition-shadow hover:shadow-md"
+                />
+                gmgn.ai
+              </a>
+              <a
+                href="https://x.com/MomoOnMonad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center"
+              >
+                <img
+                  src={CHARACTER_IMAGES.social_icons.twitter}
+                  alt="Twitter/X"
+                  className="w-55 h-55 object-contain transition-shadow hover:shadow-md"
+                />
+                Twitter/X
+              </a>
             </div>
 
             {/* Contract Address Display */}
