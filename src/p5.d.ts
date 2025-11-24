@@ -18,7 +18,7 @@ declare module 'p5' {
     keyCode: number;
 
     // Methods
-    createCanvas(w: number, h: number): any;
+    createCanvas(w: number, h: number): p5.Renderer;
     background(r: number, g: number, b: number): void;
     loadImage(path: string): Image;
     image(img: Image, x: number, y: number, w?: number, h?: number): void;
@@ -27,9 +27,9 @@ declare module 'p5' {
     noStroke(): void;
     fill(r: number, g: number, b: number): void;
     textSize(size: number): void;
-    textAlign(align: any): void;
+    textAlign(align: string | number): void;
     text(str: string, x: number, y: number): void;
-    random(arr: any[]): any;
+    random<T>(arr: T[]): T;
     random(min: number, max: number): number;
     resizeCanvas(w: number, h: number): void;
     loop(): void;
@@ -44,6 +44,17 @@ declare module 'p5' {
   class Image {
     width: number;
     height: number;
+  }
+
+  // Define Renderer class
+  class Renderer {
+    parent(node: HTMLElement | string): void;
+  }
+
+  namespace p5 {
+    class Renderer {
+      parent(node: HTMLElement | string): void;
+    }
   }
 
   export = p5;
