@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import ImageSelectorGrid from '../components/ImageSelectorGrid'
+ 
 
 const CHARACTER_IMAGES = {
   // Base monkey that always stays the same - correct plain monkey
@@ -230,7 +231,9 @@ export default function HomePage() {
       <div className="w-full flex-grow bg-white shadow-xl rounded-lg p-6 md:p-8 flex flex-col">
         {/* Top Bar within the white column */}
         <header className="w-full flex justify-between items-center mb-6 md:mb-10">
-          <h1 className="font-mono text-5xl md:text-6xl text-brand-charcoal font-semibold">bonji</h1>
+          <h1 className="font-mono text-3xl md:text-4xl text-brand-charcoal font-semibold">
+            momo the <span className="text-brand-blue">monad</span> monkey
+          </h1>
           {/* Color swatches can remain if desired */}
         <div className="flex gap-2">
             <div className="w-6 h-6 rounded bg-[#E8C19E]"></div>
@@ -391,15 +394,20 @@ export default function HomePage() {
           </main>
 
           {/* Socials & Info Section */}
-          <aside className="w-full lg:w-[360px] flex-shrink-0 flex flex-col items-center lg:items-start gap-4 mt-8 lg:mt-0">
-            <p className="font-mono text-gray-400 text-xs text-center lg:text-left"> (yes u can click these little guys)</p>
-            <div className="flex flex-row justify-center lg:justify-start gap-6 w-full">
-              {[ 
-                { name: 'DexScreener', img: CHARACTER_IMAGES.social_icons.dexscreener, url: 'https://dexscreener.com/solana/j8lffwta4nphhwjwt9pttsfabbx1ryidkxp9qtqhpm5t' },
-                { name: 'LetsBonk.fun', img: CHARACTER_IMAGES.social_icons.pumpfun, url: 'https://letsbonk.fun/token/CZnfyqE8J6pNUWTA3Xrp252PXrsp2xdLQd6zifHnbonk' },
-                { name: 'Twitter/X', img: CHARACTER_IMAGES.social_icons.twitter, url: 'https://x.com/Bonjionbonk' }
+          <aside className="w-full lg:w-[360px] flex-shrink-0 flex flex-col items-center lg:items-center gap-4 mt-8 lg:mt-0">
+            <div className="flex flex-row justify-center lg:justify-center gap-6 w-full">
+              {[
+                { name: 'DexScreener', img: CHARACTER_IMAGES.social_icons.dexscreener },
+                { name: 'gmgn.ai', img: CHARACTER_IMAGES.social_icons.pumpfun },
+                { name: 'Twitter/X', img: CHARACTER_IMAGES.social_icons.twitter }
               ].map(social => (
-                <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center">
+                <a
+                  key={social.name}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className="flex flex-col items-center gap-2 text-sm text-gray-600 hover:text-brand-blue transition-colors text-center"
+                  aria-disabled="true"
+                >
                   <img src={social.img} alt={social.name} className="w-55 h-55 object-contain transition-shadow hover:shadow-md"/>
                   {social.name}
                 </a>
@@ -410,9 +418,9 @@ export default function HomePage() {
             <div className="mt-4 flex flex-col items-center gap-2">
               <p className="text-sm text-gray-600">Contract Address:</p>
               <div className="flex items-center gap-2">
-                <code className="text-sm bg-gray-100 px-2 py-1 rounded">CZnfyqE8J6pNUWTA3Xrp252PXrsp2xdLQd6zifHnbonk</code>
+                <code className="text-sm bg-gray-100 px-2 py-1 rounded">coming soon</code>
                 <button 
-                  onClick={() => navigator.clipboard.writeText('CZnfyqE8J6pNUWTA3Xrp252PXrsp2xdLQd6zifHnbonk')}
+                  onClick={() => navigator.clipboard.writeText('coming soon')}
                   className="text-sm bg-brand-blue text-white px-2 py-1 rounded hover:bg-blue-600 transition-colors"
                 >
                   Copy

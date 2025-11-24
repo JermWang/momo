@@ -10,13 +10,16 @@
     "format": "bunx biome format --write"
   },
   "dependencies": {
+    "@types/p5": "^1.7.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gif-decoder": "^1.2.2",
     "lucide-react": "^0.475.0",
     "next": "^15.3.2",
+    "p5": "^2.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-p5": "^1.4.1",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7"

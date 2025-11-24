@@ -20,19 +20,18 @@ const fragmentMono = Fragment_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bonji On Bonk",
-  description: "Bonji gang over everythang.",
+  title: "momo the monad monkey",
+  description: "momo the monad monkey",
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: "Bonji",
-    description: "Bonji gang over everythang.",
-    url: "https://bonjionbonk.xyz",
-    siteName: "Bonji",
+    title: "momo the monad monkey",
+    description: "momo the monad monkey",
+    siteName: "MoMo",
     images: [
       {
-        url: "/images/bonji-CTO-banner.png",
+        url: "/images/momo-banner.png",
         width: 1200,
         height: 630,
       },
@@ -42,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bonji On Bonk",
-    description: "Bonji gang over everythang.",
-    images: ["/images/bonji-CTO-banner.png"],
+    title: "momo the monad monkey",
+    description: "momo the monad monkey",
+    images: ["/images/momo-banner.png"],
   },
 };
 

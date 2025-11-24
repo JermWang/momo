@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect } from 'react';
 import ImageSelectorGrid from '../components/ImageSelectorGrid';
-import BonjiGame from '../components/BonjiGame/index';
 import styles from './page.module.css';
 
 // Define character images
@@ -96,7 +95,7 @@ export default function HomePage() {
       <div className={styles.contentWrapper}>
         <main className={styles.mainContent}>
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
-            Bonji Character Creator
+            MoMo Character Creator
           </h1>
           
           <div className="flex flex-col md:flex-row gap-8">
@@ -155,10 +154,7 @@ export default function HomePage() {
         </main>
       </div>
 
-      {/* Game Container */}
-      <div className={styles.gameWrapper}>
-        <BonjiGame />
-      </div>
+      {/* Game Container removed for now */}
     </div>
   );
 }
